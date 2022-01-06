@@ -1,0 +1,11 @@
+POST http://localhost:3000/createwebhook/128240101
+
+###
+
+GET https://api.twitch.tv/helix/users/login=prophdawg
+
+###
+
+GET https://api.twitch.tv/helix/eventsub/subscriptions
+Authorization: Bearer yglu6cx1qxjlgln0onzv3g1fzwugfk
+Client-Id: pnxjt4bag9lhdghxeqntwaauirnx4d
