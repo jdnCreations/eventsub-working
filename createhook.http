@@ -9,3 +9,11 @@ GET https://api.twitch.tv/helix/users/login=prophdawg
 GET https://api.twitch.tv/helix/eventsub/subscriptions
 Authorization: Bearer yglu6cx1qxjlgln0onzv3g1fzwugfk
 Client-Id: pnxjt4bag9lhdghxeqntwaauirnx4d
+
+###
+
+GET https://id.twitch.tv/oauth2/authorize
+    ?client_id=pnxjt4bag9lhdghxeqntwaauirnx4d
+    &redirect_uri=http://localhost
+    &response_type=token
+    &scope=channel:read:redemptions

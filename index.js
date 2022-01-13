@@ -1,7 +1,9 @@
 require('dotenv').config();
+// const dbot = require('./dbot');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+
 app.use(
   bodyParser.json({
     verify: (req, res, buf) => {
@@ -21,6 +23,10 @@ let authToken = process.env['TWITCH_ACCESS_TOKEN'];
 let ngrokUrl = process.env['NGROK_TUNNEL_URL'];
 
 let secret = process.env['SECRET'];
+
+app.get('/', (req, res) => {
+  res.send('home');
+});
 
 app.post('/createWebhook/:broadcasterId', (req, res) => {
   var createWebHookParams = {
